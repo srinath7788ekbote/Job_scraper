@@ -19,7 +19,7 @@ setup:
 	.venv\Scripts\Activate.ps1
 
 run:
-	.venv\Scripts\python.exe main.py --platform linkedin glassdoor naukri --location Bengaluru --keyword "SRE" --days 7 --limit 100 --output jobs.csv
+	.venv\Scripts\python.exe main.py --platform linkedin glassdoor naukri --location "Bengaluru" "Dubai" "London" --keyword "SRE" --days 1 --limit 100 --output jobs.csv
 
 debug:
 	.venv\Scripts\python.exe main.py --platform naukri --location Dubai --keyword "SRE" --days 7 --limit 100 --output debug_jobs.csv
