@@ -3,7 +3,6 @@ import logging
 import sys
 from pathlib import Path
 from scrapers.linkedin import LinkedinScraper
-from scrapers.indeed import IndeedScraper
 from scrapers.glassdoor import GlassdoorScraper
 from scrapers.naukri import NaukriScraper
 from utils.exporter import export_to_csv, export_to_json
@@ -20,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     parser = argparse.ArgumentParser(description="SRE Job Scraper")
-    parser.add_argument("--platform", nargs="+", choices=["linkedin", "indeed", "naukri", "glassdoor"], 
+    parser.add_argument("--platform", nargs="+", choices=["linkedin", "naukri", "glassdoor"], 
                         help="Platforms to scrape (default: all)")
     parser.add_argument("--location", nargs="+", 
                         help="Locations to search (default: India, Australia, UAE, Europe)")
@@ -33,7 +32,6 @@ def main():
     
     scraper_map = {
         "linkedin": LinkedinScraper,
-        "indeed": IndeedScraper,
         "glassdoor": GlassdoorScraper,
         "naukri": NaukriScraper
     }
