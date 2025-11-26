@@ -1,9 +1,9 @@
 [project]
 name = "job-scraper"
-version = "0.1.0"
-description = "SRE Job Scraper"
+version = "0.2.0"
+description = "Modular Multi-Platform Job Scraper with Concurrent Processing"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
     "playwright",
     "pandas",
@@ -11,6 +11,7 @@ dependencies = [
     "lxml",
     "selenium",
     "undetected-chromedriver",
+    "python-dateutil",
     "setuptools",  # Provides distutils for Python 3.13+
 ]
 
